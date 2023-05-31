@@ -4,7 +4,7 @@ Research Topic: Federated Machine Learning Implementation on Image Classificatio
 
 ### Author
 This research project is conducted by:
-- [Ali Asgarov](mailto:ali.asgarov@gwu.edu)
+[Ali Asgarov](mailto:ali.asgarov@gwu.edu)
 
 For any inquiries or further information, please feel free to contact the author.
 
