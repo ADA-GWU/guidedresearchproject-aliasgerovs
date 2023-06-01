@@ -6,13 +6,14 @@ This repository contains the code and resources for implementing federated machi
 
 ## Project Structure
 
-`Datasets/`: This directory contains the datasets used for image classification. Ensure that the required datasets are downloaded and placed in this directory before running the code.
-`Models/`: This directory contains the implementation of the image classification model using TensorFlow. Different model architectures can be explored and added in this directory.
-`Experiments/`: This directory contains the experiments for implementing federated machine learning using TFF. It includes the federated learning algorithms, communication protocols, and privacy-preserving techniques.
-`Code/`: This directory contains utility functions, scripts, and configurations for data preprocessing, evaluation metrics, and visualization.
-`Results/`: This directory is used to store the results and outputs generated during the experiments.
-`Useful Resources/`: This directory contains additional resources such as research papers, articles, and tutorials that are relevant to the project.
-`Research Proposal/`: This directory contains the research proposal, project plan, and quantitative and qualitative aspects of the project.
+.
+├── Datasets/                    # Contains the datasets used for image classification
+├── Models/                      # Contains the implementation of image classification models
+├── Experiments/                 # Contains the federated machine learning experiments using TFF
+├── Code/                        # Contains utility functions, scripts, and configurations
+├── Results/                     # Stores the results and outputs generated during experiments
+├── Useful Resources/            # Additional resources such as research papers and tutorials
+└── Research Proposal/           # Research proposal, project plan, and project aspects
 
 
 ### Author
