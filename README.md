@@ -6,9 +6,6 @@ This repository contains the code and resources for implementing federated machi
 
 ## Project Structure
 
-
-# Project Title
-
 A brief description of what this project does and who it's for
 
 `Datasets/`: This directory contains the datasets used for image classification. Ensure that the required datasets are downloaded and placed in this directory before running the code. 
