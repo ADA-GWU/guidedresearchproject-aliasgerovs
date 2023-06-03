@@ -2,19 +2,32 @@
  
 Research Topic: Federated Machine Learning Implementation on Image Classification
 
-This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms using the TensorFlow Federated (TFF) framework on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols provided by TFF.
+## Description:
+This project aims to explore federated learning for image classification while preserving privacy. The goal is to develop a federated learning algorithm specifically designed for image classification tasks and evaluate its performance compared to centralized training approaches. The project incorporates privacy-preserving techniques, such as differential privacy and secure aggregation, to ensure the protection of sensitive data during the learning process.
+
 
 ## Project Structure
+This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms using the TensorFlow Federated (TFF) framework on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols provided by TFF.
 
 A brief description of what this project does and who it's for
 
 `papers/` - this folder containa all the papers that you have analyzed.
-`data/` - any type of data used for the experiments and analysis.
+
+`data/` - any type of data used for the experiments and analysis.\
+
 `presentations/` - this folder contains presentations.
+
 `reports/` - all reports will be stored here named as report_DATE.pdf.
+
 `code/` - all codes/snippets stored here.
+
 `models/` - all builded models stored here.
 
+## Project Timeline
+The project is planned to be completed within 11 weeks.
+
+## Note:
+Throughout the project, regular monitoring and progress tracking will be implemented to ensure timely completion and resolution of any challenges or obstacles that may arise.
 
 ### Author
 This research project is conducted by:
