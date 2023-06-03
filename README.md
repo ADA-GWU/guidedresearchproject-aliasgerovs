@@ -1,6 +1,6 @@
 ﻿# Guided Research Project 
  
-Research Topic: Federated Machine Learning Implementation on Image Classification
+Research Topic: Federated Machine Learning Implementation on Image Classification.
 
 ## Description:
 This project aims to explore federated learning for image classification while preserving privacy. The goal is to develop a federated learning algorithm specifically designed for image classification tasks and evaluate its performance compared to centralized training approaches. The project incorporates privacy-preserving techniques, such as differential privacy and secure aggregation, to ensure the protection of sensitive data during the learning process.
@@ -11,7 +11,7 @@ This repository contains the code and resources for implementing federated machi
 
 A brief description of what this project does and who it's for
 
-`papers/` - this folder containa all the papers that have analyzed.
+`papers/` - this folder containa all the papers that have been analyzed.
 
 `data/` - any type of data used for the experiments and analysis.
 
