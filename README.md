@@ -19,10 +19,6 @@ A brief description of what this project does and who it's for
 
 `reports/` - all reports will be stored here named as report_DATE.pdf.
 
-`code/` - all codes/snippets stored here.
-
-`models/` - all builded models stored here.
-
 ## Project Timeline
 The project is planned to be completed within 11 weeks.
 
