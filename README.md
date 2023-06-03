@@ -2,29 +2,36 @@
  
 Research Topic: Federated Machine Learning Implementation on Image Classification
 
-This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms using the TensorFlow Federated (TFF) framework on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols provided by TFF.
+## Description:
+This project aims to explore federated learning for image classification while preserving privacy. The goal is to develop a federated learning algorithm specifically designed for image classification tasks and evaluate its performance compared to centralized training approaches. The project incorporates privacy-preserving techniques, such as differential privacy and secure aggregation, to ensure the protection of sensitive data during the learning process.
+
 
 ## Project Structure
+This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms using the TensorFlow Federated (TFF) framework on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols provided by TFF.
 
 A brief description of what this project does and who it's for
 
-`Datasets/`: This directory contains the datasets used for image classification. Ensure that the required datasets are downloaded and placed in this directory before running the code. 
+`papers/` - this folder containa all the papers that you have analyzed.
 
-`Models/`: This directory contains the implementation of the image classification model using TensorFlow. Different model architectures can be explored and added in this directory.
+`data/` - any type of data used for the experiments and analysis.\
 
-`Experiments/`: This directory contains the experiments for implementing federated machine learning using TFF. It includes the federated learning algorithms, communication protocols, and privacy-preserving techniques.
+`presentations/` - this folder contains presentations.
 
-`Code/`: This directory contains utility functions, scripts, and configurations for data preprocessing, evaluation metrics, and visualization.
+`reports/` - all reports will be stored here named as report_DATE.pdf.
 
-`Results/`: This directory is used to store the results and outputs generated during the experiments.
+`code/` - all codes/snippets stored here.
 
-`Useful Resources/`: This directory contains additional resources such as research papers, articles, and tutorials that are relevant to the project.
+`models/` - all builded models stored here.
 
-`Research Proposal/`: This directory contains the research proposal, project plan, and quantitative and qualitative aspects of the project.
+## Project Timeline
+The project is planned to be completed within 11 weeks.
+
+## Note:
+Throughout the project, regular monitoring and progress tracking will be implemented to ensure timely completion and resolution of any challenges or obstacles that may arise.
 
 ### Author
 This research project is conducted by:
-[Ali Asgarov](mailto:ali.asgarov@gwu.edu)
+[Ali Asgarov](mailto:ali.asgarov@gwmail.gwu.edu)
 
 For any inquiries or further information, please feel free to contact the author.
 
