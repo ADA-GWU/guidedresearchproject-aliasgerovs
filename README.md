@@ -11,9 +11,9 @@ This repository contains the code and resources for implementing federated machi
 
 A brief description of what this project does and who it's for
 
-`papers/` - this folder containa all the papers that you have analyzed.
+`papers/` - this folder containa all the papers that have analyzed.
 
-`data/` - any type of data used for the experiments and analysis.\
+`data/` - any type of data used for the experiments and analysis.
 
 `presentations/` - this folder contains presentations.
 
