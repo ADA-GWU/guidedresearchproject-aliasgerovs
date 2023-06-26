@@ -7,7 +7,7 @@ This project aims to explore federated learning for image classification while p
 
 
 ## Project Structure
-This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms using the TensorFlow Federated (TFF) framework on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols provided by TFF.
+This repository contains the code and resources for implementing federated machine learning for image classification. The project aims to explore the application of federated learning algorithms on image classification tasks. The implementation focuses on privacy-preserving techniques and efficient communication protocols.
 
 A brief description of what this project does and who it's for
 
