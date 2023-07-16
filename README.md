@@ -19,6 +19,11 @@ A brief description of what this project does and who it's for
 
 `reports/` - all reports will be stored here named as report_DATE.pdf.
 
+## Project Plan
+
+![image](https://github.com/ADA-GWU/guidedresearchproject-aliasgerovs/assets/49990436/a3dc799a-ee91-4756-9aa1-93ae8550d132)
+
+
 ## Project Timeline
 The project is planned to be completed within 11 weeks.
 
