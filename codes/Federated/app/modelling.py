@@ -19,13 +19,13 @@ class net2nn(nn.Module):
         x = self.fc3(x)
         return x
 
-    def train_model(self, train_loader, criterion, optimizer):
+    def train_model(self, train_loader, loss_function, optimizer):
         self.train() 
         train_loss = 0.0 
         correct = 0 
         for data, target in train_loader: 
             output = self(data) 
-            loss = criterion(output, target)
+            loss = loss_function(output, target)
             optimizer.zero_grad() 
             loss.backward()  
             optimizer.step()
@@ -35,14 +35,14 @@ class net2nn(nn.Module):
 
         return train_loss / len(train_loader), correct / len(train_loader.dataset) 
 
-    def validate_model(self, test_loader, criterion):
+    def validate_model(self, test_loader, loss_function):
         self.eval()
         test_loss = 0.0
         correct = 0
         with torch.no_grad():
             for data, target in test_loader:
                 output = self(data)
-                test_loss += criterion(output, target).item()
+                test_loss += loss_function(output, target).item()
                 prediction = output.argmax(dim=1, keepdim=True)
                 correct += prediction.eq(target.view_as(prediction)).sum().item()
 
