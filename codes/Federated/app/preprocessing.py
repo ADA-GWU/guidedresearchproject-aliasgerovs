@@ -18,21 +18,21 @@ def shuffle_data_and_build_dict_for_indexes_of_labels(y_data, seed, amount):
         label_info=label_info[0:amount]
         label_info=pd.DataFrame(label_info, columns=["label","index"])
         label_dict.update({var_name: label_info })
-    return label_dict # labeller ve her labelden amount qeder client_datalarin indexlerin goturub, labeller shuffle edirik ve amount qeder label secirik
+    return label_dict # labeller ve her labelden amount qeder indexlerin goturub, labeller shuffle edirik ve amount qeder label secirik
 
 def creating_client_data_sets_for_each_client_with_shuffled_data(label_dict, number_of_clients, amount): 
     clients_data_dicts= dict()
-    batch_size =int(math.floor(amount/number_of_clients))
+    label_amount =int(math.floor(amount/number_of_clients))
     for i in range(number_of_clients):
         client_data_name="client_data_"+str(i)
         dumb=pd.DataFrame()
         for j in range(10):
             label_name=str("label_")+str(j)
-            a=label_dict[label_name][i*batch_size:(i+1)*batch_size]
+            a=label_dict[label_name][i*label_amount:(i+1)*label_amount]
             dumb=pd.concat([dumb,a], axis=0)
         dumb.reset_index(drop=True, inplace=True)    
         clients_data_dicts.update({client_data_name: dumb}) 
-    return clients_data_dicts # number of client_datas qeder client_data build edirik ver he client_datada her labelden var batch-size qeder
+    return clients_data_dicts # number of client_datas qeder client_data build edirik ver he client_datada her labelden var label_amount qeder
 
 
 def creating_final_datasets_with_combining_client_datas(clients_data_dicts, x_data, y_data, x_name, y_name, number_of_clients):
@@ -50,7 +50,7 @@ def creating_final_datasets_with_combining_client_datas(clients_data_dicts, x_da
         y_info= y_data[indexes]
         y_data_dict.update({yname : y_info})
         
-    return x_data_dict, y_data_dict # client_data-dictda labeller var ama x-data yoxdu, burda x-data ile hemin labelleri biryere yigiriq
+    return x_data_dict, y_data_dict # client_data-dictda labeller var ama x-data saxlamadiq, burda x-data ile hemin labelleri biryere yigiriq
  
 def data_shuffler_and_distributor_for_client(x_data, y_data, x_name, y_name, amount, number_of_clients):
     label_dict=shuffle_data_and_build_dict_for_indexes_of_labels(y_data, 1, amount)
