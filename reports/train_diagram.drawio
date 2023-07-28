@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" modified="2023-07-28T03:05:42.275Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/100.0.0.0" etag="j2UhKu_C4_vTmpwoxg1L" version="21.6.5" type="device">
+  <diagram name="Page-1" id="5hu8BzUk6gzjEsowXNO1">
+    <mxGraphModel dx="1180" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="3000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-1" target="MIKn4EVIKrB6j6PvEWFl-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-1" value="Setting model to train mode" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="140" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-2" target="MIKn4EVIKrB6j6PvEWFl-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-2" value="Resetting train_loss and correctly predicted sample counts to 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.414;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-3" target="MIKn4EVIKrB6j6PvEWFl-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-3" value="All data &lt;br&gt;has been used in training ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-7" value="No ?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="675" y="138" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-8" target="MIKn4EVIKrB6j6PvEWFl-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-8" value="Training the model" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-9" target="MIKn4EVIKrB6j6PvEWFl-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-9" value="Calculation of loss with loss function&lt;br&gt;&lt;b&gt;CrossEntropyLoss&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-13" target="MIKn4EVIKrB6j6PvEWFl-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-13" value="Clearing the gradients" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-15" target="MIKn4EVIKrB6j6PvEWFl-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-15" value="Parameter update" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-17" target="MIKn4EVIKrB6j6PvEWFl-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-17" value="Increasing the train loss with current iteration loss" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-19" target="MIKn4EVIKrB6j6PvEWFl-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-19" value="Output prediction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="MIKn4EVIKrB6j6PvEWFl-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-22" value="Evaluation correctly predicted or not" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MIKn4EVIKrB6j6PvEWFl-27" value="Return average training loss and accuracy of model - correctly predicted count / all&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="138" width="140" height="72" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
