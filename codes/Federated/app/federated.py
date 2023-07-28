@@ -101,12 +101,12 @@ def start_train_end_node_process(number_of_clients, model_dict, name_of_criterio
         criterion=criterion_dict[name_of_criterions[i]]
         optimizer=optimizer_dict[name_of_optimizers[i]]
     
-        print("Client: " ,i)
+        # print("Client: " ,i)
         for epoch in range(numEpoch):        
             train_loss, train_accuracy = model.train_model(train_dl, criterion, optimizer)
             test_loss, test_accuracy =   model.validate_model(test_dl, criterion)
     
-            print("epoch: {:3.0f}".format(epoch+1) + " | train accuracy: {:7.5f}".format(train_accuracy) + " | test accuracy: {:7.5f}".format(test_accuracy))
+            # print("epoch: {:3.0f}".format(epoch+1) + " | train accuracy: {:7.5f}".format(train_accuracy) + " | test accuracy: {:7.5f}".format(test_accuracy))
 
 
 def compare_local_and_merged_model_performance(number_of_clients, model_dict, name_of_criterions, name_of_optimizers, criterion_dict, name_of_models, optimizer_dict, main_model, main_criterion,  x_test_dict, y_test_dict, batch_size):
