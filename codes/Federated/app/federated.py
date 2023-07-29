@@ -7,7 +7,7 @@ import torchvision.transforms as transforms
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 import torch
-import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor
 from modelling import net2nn
 
 def create_model_optimizer_criterion_dict(number_of_clients, learning_rate, momentum):
@@ -90,32 +90,29 @@ def send_main_model_to_nodes_and_update_model_dict(main_model, model_dict, numbe
     return model_dict
 
 
-def train_client(client_id, model, criterion, optimizer, train_dl, test_dl, numEpoch):
-    for epoch in range(numEpoch):        
-        train_loss, train_accuracy = model.train_model(train_dl, criterion, optimizer)
-        test_loss, test_accuracy = model.validate_model(test_dl, criterion)
-        print(f"Client {client_id}, Epoch {epoch+1}: Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-
 def start_train_end_node_process(number_of_clients, model_dict, name_of_criterions, name_of_optimizers, criterion_dict, name_of_models, optimizer_dict, x_train_dict, y_train_dict, x_test_dict, y_test_dict, batch_size, numEpoch):
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = []
-        for i in range(number_of_clients):
-            train_ds = TensorDataset(x_train_dict[list(x_train_dict.keys())[i]], y_train_dict[list(y_train_dict.keys())[i]])
-            train_dl = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
+    def train_and_validate(client_idx):
+        x_train, y_train = x_train_dict[list(x_train_dict.keys())[client_idx]], y_train_dict[list(y_train_dict.keys())[client_idx]]
+        x_test, y_test = x_test_dict[list(x_test_dict.keys())[client_idx]], y_test_dict[list(y_test_dict.keys())[client_idx]]
         
-            test_ds = TensorDataset(x_test_dict[list(x_test_dict.keys())[i]], y_test_dict[list(y_test_dict.keys())[i]])
-            test_dl = DataLoader(test_ds, batch_size=batch_size * 2)
-    
-            model = model_dict[name_of_models[i]]
-            criterion = criterion_dict[name_of_criterions[i]]
-            optimizer = optimizer_dict[name_of_optimizers[i]]
-    
-            futures.append(executor.submit(train_client, i, model, criterion, optimizer, train_dl, test_dl, numEpoch))
+        train_ds = TensorDataset(x_train, y_train)
+        train_dl = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
         
-        # Wait for all clients to finish training
-        concurrent.futures.wait(futures)
+        test_ds = TensorDataset(x_test, y_test)
+        test_dl = DataLoader(test_ds, batch_size=batch_size * 2)
     
-    print("All clients have completed training.")
+        model = model_dict[name_of_models[client_idx]]
+        criterion = criterion_dict[name_of_criterions[client_idx]]
+        optimizer = optimizer_dict[name_of_optimizers[client_idx]]
+        
+        for epoch in range(numEpoch):
+            train_loss, train_accuracy = model.train_model(train_dl, criterion, optimizer)
+            test_loss, test_accuracy = model.validate_model(test_dl, criterion)
+            
+            # Optionally, you can store or log the training and validation results here
+
+    with ThreadPoolExecutor() as executor:
+        executor.map(train_and_validate, range(number_of_clients))
 
 def compare_local_and_merged_model_performance(number_of_clients, model_dict, name_of_criterions, name_of_optimizers, criterion_dict, name_of_models, optimizer_dict, main_model, main_criterion,  x_test_dict, y_test_dict, batch_size):
     accuracy_table=pd.DataFrame(data=np.zeros((number_of_clients,3)), columns=["Client", "local_ind_model", "merged_main_model"])
